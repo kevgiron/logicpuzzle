@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+<!-- Author: Kevin Giron -->
+<!-- This file holds the start up question 1-->
+    <title>Question 1</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="logic.js"></script>
+  </head>
+  <body>
+
+    <h1 class="title">Question 1</h1>
+
+    <p class="par">Solve the missing number in the last box</p>
+
+    <div class="wrapper">
+  <div class="box">4</div>
+  <div class="box">3</div>
+  <div class="box">5</div>
+  <div class="box">8</div>
+  <div class="box">6</div>
+  <div class="box">10</div>
+  <div class="box">24</div>
+  <div class="box">18</div>
+  <div class="box">?</div>
+</div>
+<!--answer is 30 to solve take the first number in a row,
+mulitply by two and you get the second number then
+ multiply the second number by three and you get 30-->
+
+ <input type="text" class="form-control" oninput="testOneValidate();" id="input">
+ <button class="button" type="button" onclick="testOneCheck();">
+  Answer!
+</button>
+
+<p id="error" style="color:red"></p>
+
+
+
+  </body>
+
+</html>
