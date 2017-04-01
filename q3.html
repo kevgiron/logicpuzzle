@@ -1,5 +1,5 @@
 <!-- Author: Kevin Giron -->
-<!-- This file holds the start up question 2-->
+<!-- This file holds the start up question 3-->
 <!DOCTYPE html>
 <head>
   <title>Question 3</title>
@@ -11,30 +11,21 @@
     <h1 class="title">Question 3</h1>
     <p class="par">Find the missing number in the last box.
       All numbers are following a specific pattern. </p>
-    <div class="wrapper">
-    <div class="box">7</div>
-    <div class="box">5</div>
-    <div class="box">4</div>
-    <div class="box">5</div>
-    <div class="box">4</div>
-    <div class="box">7</div>
-    <div class="box">9</div>
-    <div class="box">5</div>
-    <div class="box">1</div>
-    <div class="box">3</div>
-    <div class="box">7</div>
-    <div class="box">4</div>
-    <div class="box">2</div>
-    <div class="box">8</div>
-    <div class="box">??</div>
+      <ul class="flex-container">
+      <li class="flex-item">8</li>
+      <li class="flex-item">12</li>
+      <li class="flex-item">24</li>
+      <li class="flex-item">60</li>
+      <li class="flex-item">???</li>
+    </ul>
 
-    </div>
-
-    <input type="text" class="form-control" oninput="testThreeValidate();" id="input">
-            <button class="button" type="button" onclick="testThreeCheck();">
+    <input type="text" oninput="valThree();" id="input">
+            <button class="button" type="button" onclick="checkThree();">
             Finish!
             </button>
+            <div class="wrong">
             <p id="error" style="color:red"></p>
+          </div>
 
 
   </body>

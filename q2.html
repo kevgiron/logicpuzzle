@@ -12,23 +12,21 @@
     <h1 class="title">Question 2</h1>
 
     <p class="par">Find the missing number</p>
-    <div class="wrapper">
-    <div class="box">11</div>
-    <div class="box">5</div>
-    <div class="box">12</div>
-    <div class="box">2</div>
-    <div class="box">2</div>
-    <div class="box">5</div>
-    <div class="box">18</div>
-    <div class="box">??</div>
-    <div class="box">14</div>
-  </div>
-  <input type="text" class="form-control" oninput="testTwoValidate();" id="input">
-          <button class="button" type="button" onclick="testTwoCheck();">
+    <ul class="flex-container">
+    <li class="flex-item">2</li>
+    <li class="flex-item">5</li>
+    <li class="flex-item">26</li>
+    <li class="flex-item">677</li>
+    <li class="flex-item">???</li>
+
+  </ul>
+  <input type="text" oninput="valTwo();" id="input">
+          <button class="button" type="button" onclick="checkTwo();">
           Answer!
           </button>
-        <p id="error" style="color:red"></p>
-
+          <div class="wrong">
+          <p id="error" style="color:red"></p>
+        </div>
   </body>
 
 </html>

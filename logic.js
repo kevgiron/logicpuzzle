@@ -1,119 +1,134 @@
 //by Kevin Giron
-function testOneCheck()
+function checkOne()
 {
-  var newItem = document.getElementById("input").value;
-  if(newItem != 30){
-    var test1 = 0;
-    document.cookie = ("testOne=" + test1);
+  var qAnswer = document.getElementById("input").value;
+  if(qAnswer != 22)
+  {
+    var qOne = 0;
+    document.cookie = ("q1check=" + qOne);
     document.getElementById("input").value = '';
     window.location = "q2.html";
   }
-  else{
-    var test1 = 1;
-    document.cookie = ("testOne=" + test1);
+  else
+  {
+    var qOne = 1;
+    document.cookie = ("q1check=" + qOne);
     document.getElementById("input").value = '';
     window.location = "q2.html";
   }
 }
-
-function testTwoCheck()
+function valOne()
 {
-  var newItem = document.getElementById("input").value;
-  if(newItem != 6){
-    var test2 = 0;
-    document.cookie = ("testTwo=" + test2);
-    document.getElementById("input").value = '';
-    window.location = "q3.html";
-  }
-  else{
-    var test2 = 1;
-    document.cookie = ("testTwo=" + test2);
-    document.getElementById("input").value = '';
-    window.location = "q3.html";
-  }
-}
-
-function testThreeCheck()
-{
-  var newItem = document.getElementById("input").value;
-  if(newItem != 10){
-    var test3 = 0;
-    document.cookie = ("testThree=" + test3);
-    document.getElementById("input").value = '';
-    window.location = "results.html";
-  }
-  else{
-    var test3 = 1;
-    document.cookie = ("testThree=" + test3);
-    document.getElementById("input").value = '';
-    window.location = "results.html";
-  }
-}
-
-function testOneValidate(){
   var checkInput = document.getElementById("input").value;
-  if(checkInput.toLowerCase() != 30)
+  if(checkInput.toLowerCase() != 22)
+  {
+  document.getElementById("error").style.color = "red";
+  document.getElementById("error").innerHTML = 'Hint the number is greater than 20';
+
+  }
+  else{
+    document.getElementById("error").style.color = "DarkGreen ";
+    document.getElementById("error").innerHTML = 'Correct answer';
+  }
+}
+function checkTwo()
+{
+  var qAnswer = document.getElementById("input").value;
+  if(qAnswer != 458330)
+  {
+    var qTwo = 0;
+    document.cookie = ("q2check=" + qTwo);
+    document.getElementById("input").value = '';
+    window.location = "q3.html";
+  }
+  else
+  {
+    var qTwo = 1;
+    document.cookie = ("q2check=" + qTwo);
+    document.getElementById("input").value = '';
+    window.location = "q3.html";
+  }
+}
+function valTwo()
+{
+  var checkInput = document.getElementById("input").value;
+  if(checkInput.toLowerCase() != 458330)
   {
   document.getElementById("error").style.color = "red";
   document.getElementById("error").innerHTML = 'Incorrect answer';
   }
-  else{
-    document.getElementById("error").style.color = "green";
+  else
+  {
+    document.getElementById("error").style.color = "DarkGreen ";
     document.getElementById("error").innerHTML = 'Correct answer';
   }
 }
 
-function testTwoValidate(){
-  var checkInput = document.getElementById("input").value;
-  if(checkInput.toLowerCase() != 6)
+function checkThree()
+{
+  var qAnswer = document.getElementById("input").value;
+  if(qAnswer != 168)
   {
-  document.getElementById("error").style.color = "red";
-  document.getElementById("error").innerHTML = 'Incorrect answer';
+    var qThree = 0;
+    document.cookie = ("q3check=" + qThree);
+    document.getElementById("input").value = '';
+    window.location = "results.html";
   }
-  else{
-    document.getElementById("error").style.color = "green";
-    document.getElementById("error").innerHTML = 'Correct answer';
+  else
+  {
+    var qThree = 1;
+    document.cookie = ("q3check=" + qThree);
+    document.getElementById("input").value = '';
+    window.location = "results.html";
   }
 }
 
-function testThreeValidate(){
+
+function valThree()
+{
   var checkInput = document.getElementById("input").value;
-  if(checkInput.toLowerCase() != 10)
+  if(checkInput.toLowerCase() != 168)
   {
   document.getElementById("error").style.color = "red";
   document.getElementById("error").innerHTML = 'Incorrect answer';
   }
   else{
-    document.getElementById("error").style.color = "green";
+    document.getElementById("error").style.color = "DarkGreen ";
     document.getElementById("error").innerHTML = 'Correct answer';
   }
 }
 
 function calculateScore()
 {
-  var Test1 = Number(getCookie("testOne"));
-  var Test2 = Number(getCookie("testTwo"));
-  var Test3 = Number(getCookie("testThree"));
-  var score = Test1 + Test2 + Test3;
-  if(Test1 == 1){
-  document.getElementById("t1").innerHTML = '30 is the correct answer!';
+  var qOne = Number(getCookie("q1check"));
+  var qTwo = Number(getCookie("q2check"));
+  var qThree = Number(getCookie("q3check"));
+  var score = qOne + qTwo + qThree;
+  if(qOne == 1)
+  {
+  document.getElementById("t1").innerHTML = '22 is the correct answer!';
+  }
+  else
+  {
+    document.getElementById("t1").innerHTML = 'Sorry the right answer was 22';
+  }
+  if(qTwo == 1)
+  {
+    document.getElementById("t2").innerHTML = '458330 is the correct answer!';
   }
   else {
-    document.getElementById("t1").innerHTML = 'Sorry the right answer was 30';
+
+    document.getElementById("t2").innerHTML = 'Sorry the right answer was 458330';
   }
-  if(Test2 == 1){
-  document.getElementById("t2").innerHTML = '6 is the correct answer!';
+  if(qThree == 1)
+  {
+    document.getElementById("t3").innerHTML = '168 is the correct answer!';
   }
-  else {
-    document.getElementById("t2").innerHTML = 'Sorry the right answer was 6';
+  else
+  {
+    document.getElementById("t3").innerHTML = 'Sorry the right answer was 168 to solve subtract 4 then multiply each number by 3 to give the next number';
   }
-  if(Test3 == 1){
-  document.getElementById("t3").innerHTML = '10 is Correct';
-  }
-  else {
-    document.getElementById("t3").innerHTML = 'Sorry the right answer was 10';
-  }
-  document.getElementById("score").innerHTML = 'you got ' + score + ' out of 3 correct';
+    document.getElementById("score").innerHTML = 'You got ' + score + ' out of 3 correct!';
 }
 
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
